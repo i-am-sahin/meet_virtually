@@ -24,9 +24,9 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 38.0),
-            child: Image.asset('assets/images/onBoarding.jpg'),
+            child: Image.asset('assets/images/onboarding.jpg'),
           ),
-          const CustomButton(
+           CustomButton(
             text: 'Login',
             onPressed: () {},
           ),
