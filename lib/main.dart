@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meet_virtually/screens/home_screen.dart';
 import 'package:meet_virtually/screens/login_sccreen.dart';
 import 'package:meet_virtually/utils/colors.dart';
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/login': (context) => const LoginScreen(),
+        '/home' : (context) =>HomeScreen(),
       },
       home: const LoginScreen(),
     );

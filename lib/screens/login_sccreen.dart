@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meet_virtually/resources/auth_methods.dart';
 import 'package:meet_virtually/widgets/custom_button.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -9,6 +10,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final AuthMethods _authMethods = AuthMethods();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,8 +30,13 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Image.asset('assets/images/onboarding.jpg'),
           ),
            CustomButton(
-            text: 'Login',
-            onPressed: () {},
+            text: 'Google Sign In',
+            onPressed: () async{
+              bool res = await _authMethods.signInWithGoogle(context);
+              if(res){
+                Navigator.pushNamed(context, '/home');
+              }
+            },
           ),
         ],
       ),
